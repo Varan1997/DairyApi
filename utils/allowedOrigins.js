@@ -1,10 +1,14 @@
-// Both frontend apps (customer + admin) talk to this one backend, so both
-// their origins need to be allowed by CORS and the Socket.IO handshake.
-const allowedOrigins = [
-  process.env.CLIENT_URL || "https://dairy-gwv68hy9x-dairy7.vercel.app",
-  process.env.ADMIN_URL || "http://localhost:5174",
+// Both frontend apps (customer + admin) talk to this one backend,
+// so both origins need to be allowed by CORS and Socket.IO.
 
- 
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  process.env.ADMIN_URL,
+  "https://dairy-gwv68hy9x-dairy7.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:5174",
 ].filter(Boolean);
+
+console.log("Allowed CORS origins:", allowedOrigins);
 
 module.exports = allowedOrigins;
