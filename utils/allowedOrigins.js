@@ -3,7 +3,7 @@
 const allowedOrigins = [
   process.env.CLIENT_URL || "https://dairy-gwv68hy9x-dairy7.vercel.app",
   process.env.ADMIN_URL || "http://localhost:5174",
-  https://dairy-gwv68hy9x-dairy7.vercel.app
+
  
 ].filter(Boolean);
 
